@@ -1,1 +1,18 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Aaron' Blog</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.5</generator><lastBuildDate>Sun, 09 Nov 2014 23:54:43 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Hello World - A comprehensive guide to starting with Node.js</title><description>&lt;p&gt;fdsfsdfds&lt;/p&gt;</description><link>http://localhost:2368/hello-world-a-comprehensive-guide-to-starting-with-node-js/</link><guid isPermaLink="false">72989f93-c277-4832-b213-63fbb0ccd1d0</guid><dc:creator>Aaron Dack</dc:creator><pubDate>Sun, 09 Nov 2014 23:50:16 GMT</pubDate></item></channel></rss>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Aaron Dack</title><description>Whatever comes to mind</description><link>http://localhost:2368/</link><generator>Ghost 0.5</generator><lastBuildDate>Mon, 10 Nov 2014 00:22:54 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>How I met the LOVE of my Life</title><description>&lt;h2 id="bluesonthegreen"&gt;Blues on The Green&lt;/h2&gt;
+
+&lt;p&gt;It was a Wednesday when I first drove down, Waco to Austin a relatively short drive. I will always tell her that I wasn't nervous, but I'm sure there were some butterflies. I thought about what I was going to say and what I was going to do, would I be an awkard squirrel or talk to much. &lt;/p&gt;
+
+&lt;p&gt;Of course I would get lost. Why not. How simple is it to follow maps to an address? Apparently not that simple. I had to call her, but this had to be the first time we will talk on the phone. The phone call went like this.&lt;/p&gt;
+
+&lt;p&gt;Aaron: "Hello" &lt;br&gt;
+Alyssa: "Ugh Hi" &lt;br&gt;
+Aaron: "I'm lost, Can you help me" &lt;br&gt;
+Alyssa: "Laugh" &lt;br&gt;
+Alyssa: "Laugh" &lt;br&gt;
+Alyssa: "I'll be right out!"&lt;/p&gt;
+
+&lt;p&gt;Guys conceding on not knowing directions. Especially on the first date? Of course. My life. &lt;/p&gt;
+
+&lt;p&gt;To be continued. Alyssa is on skype.&lt;/p&gt;
+
+&lt;hr&gt;</description><link>http://localhost:2368/how-i-met-the-love-of-my-life/</link><guid isPermaLink="false">105038de-18bf-4236-bcdb-579ea781b254</guid><dc:creator>Aaron Dack</dc:creator><pubDate>Mon, 10 Nov 2014 00:14:45 GMT</pubDate></item><item><title>Hello World - A comprehensive guide to starting with Node.js</title><description>&lt;p&gt;fdsfsdfds&lt;/p&gt;</description><link>http://localhost:2368/hello-world-a-comprehensive-guide-to-starting-with-node-js/</link><guid isPermaLink="false">72989f93-c277-4832-b213-63fbb0ccd1d0</guid><dc:creator>Aaron Dack</dc:creator><pubDate>Sun, 09 Nov 2014 23:50:16 GMT</pubDate></item></channel></rss>
