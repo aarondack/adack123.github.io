@@ -428,6 +428,44 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0;
 }
 
+ .my-socials li {
+  float: left;
+  width: 30px;
+  margin: 5px;
+}
+ .my-socials li a {
+  background: #cd5c5c;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  color: #fff;
+}
+ .my-socials li a:hover {
+  color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+ .my-socials li .github {
+  background-color: #333;
+}
+ .my-socials li .twitter {
+  background-color: #00b6f3;
+}
+ .my-socials li .email {
+  background-color: #ffd700;
+}
+ .my-socials li i {
+  font-size: 18px;
+  font-style: normal;
+  line-height: 30px;
+  margin: 0;
+}
+
+
 
 /* ==========================================================================
    3. Utilities - These things get used a lot
