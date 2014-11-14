@@ -429,11 +429,12 @@ margin on the iframe, cause it breaks stuff. */
 }
 
  .my-socials li {
-  float: left;
+  float: center;
   width: 30px;
   margin: 5px;
 }
  .my-socials li a {
+  float: center;
   background: #cd5c5c;
   text-decoration: none;
   display: block;
