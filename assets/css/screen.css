@@ -458,6 +458,12 @@ margin on the iframe, cause it breaks stuff. */
  .my-socials li .email {
   background-color: #ffd700;
 }
+ .my-socials li .linkedin {
+  background-color: #4875B4;
+}
+.my-socials li .facebook {
+  background-color: #3B5998
+}
  .my-socials li i {
   font-size: 18px;
   font-style: normal;
