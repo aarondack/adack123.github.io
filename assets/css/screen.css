@@ -428,27 +428,39 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0;
 }
 
- .my-socials li {
-  float: center;
-  width: 30px;
+.my-socials ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    display: inline;
+}
+.my-socials li {
+
+  width: 0px;
   margin: 5px;
+  list-style: none;
+  display: inline;
+
 }
  .my-socials li a {
-  float: center;
+  float: center; 
   background: #cd5c5c;
   text-decoration: none;
-  display: block;
   text-align: center;
+  display: inline-block;
   width: 30px;
   height: 30px;
   -webkit-border-radius: 30px;
   border-radius: 30px;
   color: #fff;
+  
 }
  .my-socials li a:hover {
   color: #fff;
   -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  list-style: none;
 }
  .my-socials li .github {
   background-color: #333;
@@ -456,7 +468,7 @@ margin on the iframe, cause it breaks stuff. */
  .my-socials li .twitter {
   background-color: #00b6f3;
 }
- .my-socials li .email {
+ .my-socials li .main {
   background-color: #ffd700;
 }
  .my-socials li .linkedin {
@@ -471,7 +483,6 @@ margin on the iframe, cause it breaks stuff. */
   line-height: 30px;
   margin: 0;
 }
-
 
 
 /* ==========================================================================
@@ -529,6 +540,7 @@ margin on the iframe, cause it breaks stuff. */
 .main-header .inner {
     width: 80%;
 }
+
 
 .main-nav {
     position: relative;
@@ -696,37 +708,6 @@ margin on the iframe, cause it breaks stuff. */
     background: #fff;
     transition: all 0.1s ease;
 }
-.my-socials {
-      display inline-block
-      list-style none
-      margin 0 auto
-      li
-        float left
-        width 30px
-        margin 5px
-        a
-          text-decoration none
-          display block
-          text-align center
-          width 30px
-          height 30px
-          border-radius 30px
-          color #fff
-          &:hover
-            color #fff
-            box-shadow 0 0 10px rgba(0, 0, 0, 0.5)
-        .github
-          background-color #333333
-        .twitter
-          background-color #00b6f3
-        .email
-          background-color #ffd700
-        i
-          font-size 18px
-          font-style normal
-          line-height 30px
-          margin 0
-}
 
 /* Add a border to the buttons on hover */
 .back-button:hover,
@@ -737,7 +718,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
-    margin: 10px 0 10px 0;
+   
     font-size: 3rem;
     letter-spacing: -1px;
     font-weight: 700;
@@ -746,8 +727,8 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .page-description {
-    margin: 0;
-    font-size: 1.5rem;
+
+    font-size: 1.3rem;
     line-height: 1.5em;
     font-weight: 400;
     font-family: "Merriweather", serif;
@@ -1465,11 +1446,13 @@ body:not(.post-template) .post-title {
     }
 
     h1 {
+        float: center;
         font-size: 4.5rem;
         text-indent: -2px;
     }
 
     h2 {
+        float: center;
         font-size: 3.6rem;
     }
 
@@ -1850,7 +1833,9 @@ body:not(.post-template) .post-title {
 }
 
 
+
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+
