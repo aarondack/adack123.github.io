@@ -32,7 +32,8 @@
 
 </head>
 <body class="home-template">
-<canvas id="main-header">
+<header class="main-header">
+  <canvas id="gradient-canvis"></canvas>
   <div class="vertical">
   <ul class="my-socials">
   <h1 class="page-title">Aaron Dack</h1>
@@ -60,7 +61,7 @@
             </div>
 
     <a class="scroll-down icon-arrow-left" href="index.html#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
-</canvas>
+</header>
 
 <main id="content" class="content" role="main">
 
@@ -126,11 +127,11 @@
     <script type="text/javascript" src="assets/js/granim.min.js"></script>
     <script>
           var granimInstance = new Granim({
-          element: '#main-header',
+          element: '#gradient-canvis',
           name: 'radial-gradient',
           direction: 'radial',
           opacity: [1, 1],
-          isPausedWhenNotInView: true,
+          isPausedWhenNotInView: false,
           states : {
               "default-state": {
                   gradients: [
