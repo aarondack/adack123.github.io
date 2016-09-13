@@ -32,7 +32,7 @@
 
 </head>
 <body class="home-template">
-<header class="main-header">
+<canvas id="main-header">
   <div class="vertical">
   <ul class="my-socials">
   <h1 class="page-title">Aaron Dack</h1>
@@ -60,7 +60,7 @@
             </div>
 
     <a class="scroll-down icon-arrow-left" href="index.html#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
-</header>
+</canvas>
 
 <main id="content" class="content" role="main">
 
@@ -124,4 +124,22 @@
     <script type="text/javascript" src="assets/js/jquery.fitvids.js?v=710def20ef"></script>
     <script type="text/javascript" src="assets/js/index.js?v=710def20ef"></script>
     <script type="text/javascript" src="assets/js/granim.min.js"></script>
+    <script>
+          var granimInstance = new Granim({
+          element: '#main-header',
+          name: 'radial-gradient',
+          direction: 'radial',
+          opacity: [1, 1],
+          isPausedWhenNotInView: true,
+          states : {
+              "default-state": {
+                  gradients: [
+                      ['#ffb347', '#ffcc33'],
+                      ['#83a4d4', '#b6fbff'],
+                      ['#9D50BB', '#6E48AA']
+                  ]
+              }
+          }
+      });
+</script>
 </body>
