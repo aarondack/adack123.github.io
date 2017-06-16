@@ -86,7 +86,7 @@ a:focus {
 	align-items: center;
 	width: 100%;
 	padding: 0 7em;
-	padding-top: 3em;
+	padding-top: 4em;
 	perspective: 800px;
 	perspective-origin: 50% 100%;
 	animation: appear 1.4s 1;
