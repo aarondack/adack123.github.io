@@ -1,0 +1,151 @@
+@font-face {
+	font-family: Colfax;
+	src: url('../fonts/ColfaxRegular.woff') format('woff');
+	font-style: normal;
+}
+
+@font-face {
+  font-family: Colfax-Medium;
+  src: url('../fonts/ColfaxWebMedium.woff') format('woff');
+  font-weight: 200
+}
+
+@font-face {
+	font-family: Colfax-Light;
+	src: url('../fonts/ColfaxWebLight.woff') format('woff');
+	font-style: normal;
+}
+
+html, body {
+	font-family: Colfax;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+.first-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.grid-section {
+	height: 100%;
+	background-color: #EFEFEF;
+}
+
+.container {
+	margin-top: 10em;
+}
+
+.header {
+	font-family: Colfax-Light;
+	display: inline-flex;
+	margin-left: 2em;
+	text-transform: uppercase;
+	font-size: 1.1em;
+}
+
+.link-holder {
+	display: flex;
+	flex-direction: row;
+}
+
+.nav-effect {
+	display: flex;
+	justify-content: space-around;
+}
+
+nav a {
+	font-family: Colfax-Medium;
+	display: flex;
+	align-items: center;
+	margin: 15px 25px;
+	outline: none;
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.0em;
+}
+
+nav a:hover, nav a:focus {
+  outline: none;
+}
+
+.nav-effect a::before,
+.nav-effect a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.nav-effect a::before {
+	margin-right: 10px;
+	content: '{';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.nav-effect a::after {
+	margin-left: 10px;
+	content: '}';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+.nav-effect a:hover::before,
+.nav-effect a:hover::after,
+.nav-effect a:focus::before,
+.nav-effect a:focus::after,
+.nav-effect a:active::before,
+.nav-effect a:active::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+.project {
+	height: 250px;
+  flex-basis: 500px;
+	border: 1px solid black;
+}
+
+.projects-container {
+	width: 100%;
+}
+
+.section {
+	width: 100%;
+}
+
+.project-images {
+	width: 100%;
+	height: 100%;
+}
+
+.project-images:hover {
+	opacity: 0.6;
+	transition: all 1s;
+	transform-origin: 50% 50%;
+}
+
+.project:hover::before {
+	content: 'Hello world';
+	position: absolute;
+	top: 60px;
+	left: 50px;
+	width: 30px;
+	height: 20px;
+	text-align: center;
+}
