@@ -23,6 +23,10 @@ html, body {
 	padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6, ul, li, span {
+	font-family: Colfax;
+}
+
 li {
 	list-style: none;
 }
@@ -148,4 +152,44 @@ nav a:hover, nav a:focus {
 	width: 30px;
 	height: 20px;
 	text-align: center;
+}
+
+.bio {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding-left: 250px;
+	padding-right: 250px;
+	background-color: white;
+}
+
+.wave {
+	font-size: 85px;
+}
+
+.typed-header {
+	font-size: 30px;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
