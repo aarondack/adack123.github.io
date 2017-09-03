@@ -1,10 +1,26 @@
+@font-face {
+  font-family: 'Colfax';
+  font-style: normal;
+  src: url('../assets/fonts/ColfaxRegular.woff');
+}
+
+@font-face {
+  font-family: 'ColfaxMedium';
+  src: url('../assets/fonts/ColfaxWebMedium.woff');
+}
+
+@font-face {
+	font-family: 'ColfaxLight';
+	src: url('../assets/fonts/ColfaxWebLight.woff');
+}
+
 html, body {
 	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
 	background: #FAFAFA;
-	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-family: 'Colfax', arial, sans-serif;
 	font-weight: 400;
 	color: #444;
 	-webkit-font-smoothing: antialiased;
