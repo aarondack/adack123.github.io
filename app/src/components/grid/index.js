@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 import Box from '../box';
 
+import patchboxImage from '../../assets/images/patchbox-items.jpg';
+import haymakersImage from '../../assets/images/Haymakers_Logo.png';
+import nuventsImage from '../../assets/images/NuventsCover.jpg';
+
+
 const GridContainer = styled.div`
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -19,9 +23,9 @@ const GridSection = styled.section`
 const Grid = () => (
   <GridContainer>
     <GridSection>
-      <Box />
-      <Box />
-      <Box />
+      <Box img={patchboxImage} />
+      <Box img={nuventsImage} />      
+      <Box img={haymakersImage} />
     </GridSection>
   </GridContainer>
 );
