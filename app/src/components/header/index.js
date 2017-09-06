@@ -8,9 +8,9 @@ import style from './style.css';
 const Name = styled.h2`
   margin: 0;
   text-transform: uppercase;
-  font-size: 1.1em;
+  font-size: 1.15em;
   float: left;
-  line-height: 56px;
+  line-height: 70px;
   padding: 0 15px;
   font-family: ColfaxLight;
 `;
@@ -37,6 +37,7 @@ export default class Header extends Component {
       <Link href="/about"> About & Contact </Link>
     </BurgerMenu>
   );
+
   render() {
     return (
       <header className={style.header}>
