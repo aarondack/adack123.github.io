@@ -19,6 +19,23 @@ const imageSources = [
 ];
 
 const imageOverlayColors = ['#064c65', '#b92235', '#3d2471', '#d9ac32', '#393431', '#8abe51'];
+const imageText = [
+  'PatchBox',
+  'Nuvents',
+  'Whisker Labs',
+  'Haymakers',
+  'Amovio',
+  'Next-Gen Sequencing',
+];
+
+const imageDescriptions = [
+  'The first ever subscription box for helping psoriasis',
+  'A platform for public and intimate events',
+  'Sensor and software technology delivering home intelligence, energy savings, and peace of mind',
+  'The great American beverage. Drink differently',
+  'Transform Work. Happier employees means increased productivity',
+  'Tackling cancers biggest problems with precision oncology',
+];
 
 const GridContainer = styled.div`
   margin-left: auto;
@@ -49,15 +66,41 @@ const Grid = () => (
     <Desktop>
       <GridSection>
         {imageSources.map((value, key) => (
-          <Box img={value} mobile={false} color={imageOverlayColors[key]} />
+          <Box
+            img={value}
+            mobile={false}
+            color={imageOverlayColors[key]}
+            name={imageText[key]}
+            description={imageDescriptions[key]}
+          />
         ))}
       </GridSection>
     </Desktop>
     <Tablet>
-      <GridSection>{imageSources.map((value, key) => <Box img={value} mobile />)}</GridSection>
+      <GridSection>
+        {imageSources.map((value, key) => (
+          <Box
+            img={value}
+            mobile
+            color={imageOverlayColors[key]}
+            name={imageText[key]}
+            description={imageDescriptions[key]}
+          />
+        ))}
+      </GridSection>
     </Tablet>
     <Mobile>
-      <MobileSection>{imageSources.map((value, key) => <Box img={value} mobile />)}</MobileSection>
+      <MobileSection>
+        {imageSources.map((value, key) => (
+          <Box
+            img={value}
+            mobile
+            color={imageOverlayColors[key]}
+            name={imageText[key]}
+            description={imageDescriptions[key]}
+          />
+        ))}
+      </MobileSection>
     </Mobile>
   </GridContainer>
 );

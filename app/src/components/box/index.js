@@ -7,10 +7,6 @@ const BoxWrapping = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-
-  &:hover img {
-    transform: scale(1.2);
-  }
 `;
 
 const PortfolioImage = styled.img`
@@ -42,11 +38,50 @@ const BoxOverlayContainer = styled.div`
   position: absolute;
 `;
 
-const Box = ({ img, route, color, mobile }) => (
+const BoxOverlayInside = styled.div`
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  margin: auto;
+  width: 20em;
+  height: 10em;
+  transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(0.8);
+`;
+
+const BoxOverlayText = styled.h1`
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  &:after {
+    display: block;
+    height: 0;
+    width: 65%;
+    border-bottom: 3px solid;
+    content: '';
+    margin: 1.5em auto auto auto;
+  }
+`;
+
+const BoxOverlayParagraph = styled.p`
+  font-size: 1.2rem;
+  color: white;
+  font-family: ColfaxMedium;
+  text-align: center;
+`;
+
+const Box = ({ img, route, color, mobile, name, description }) => (
   <BoxWrapping mobile={mobile}>
     <PortfolioImage src={img} />
     <BoxOverlay>
       <BoxOverlayContainer color={color} />
+      <BoxOverlayInside>
+        <BoxOverlayText>{name}</BoxOverlayText>
+        <BoxOverlayParagraph>{description}</BoxOverlayParagraph>
+      </BoxOverlayInside>
     </BoxOverlay>
   </BoxWrapping>
 );
