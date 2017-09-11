@@ -37,3 +37,13 @@ body {
   overflow: auto;
   overflow-x: hidden;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:-webkit-any-link,
+a:-moz-any-link,
+a:any-link {
+  color: black;
+}

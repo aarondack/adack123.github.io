@@ -5,6 +5,9 @@ import Header from './header';
 import Home from '../routes/home';
 import Portfolio from '../routes/portfolio';
 import Writings from '../routes/writings';
+import Greek from './posts/greek';
+import ReduxSaga from './posts/redux-saga';
+import Davinci from './posts/davinci';
 
 export default class App extends Component {
   /** Gets fired when the route changes.
@@ -22,6 +25,9 @@ export default class App extends Component {
         <Router onChange={this.handleRoute}>
           <Portfolio path="/" />
           <Writings path="/writings" />
+          <Greek path="/writings/greek" />
+          <ReduxSaga path="/writings/redux-asynchronicity" />
+          <Davinci path="/writings/the-lost-leonardo" />
         </Router>
       </div>
     );
