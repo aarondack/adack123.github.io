@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Desktop, Tablet, Mobile } from '../responsive';
 import Box from '../box';
 
@@ -37,6 +37,17 @@ const imageDescriptions = [
   'Tackling cancers biggest problems with precision oncology',
 ];
 
+const Appearance = keyframes`
+from {
+  transform: scale(0);
+  opacity:0;
+}
+to {
+  transform: scale(1);
+  opacity:1;
+}
+`;
+
 const GridContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
@@ -51,6 +62,7 @@ const GridSection = styled.section`
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
+  animation: ${Appearance} 1.5s 1;
 `;
 
 const MobileSection = styled.section`

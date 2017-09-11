@@ -4,6 +4,7 @@ import { Router } from 'preact-router';
 import Header from './header';
 import Home from '../routes/home';
 import Portfolio from '../routes/portfolio';
+import Writings from '../routes/writings';
 
 export default class App extends Component {
   /** Gets fired when the route changes.
@@ -20,6 +21,7 @@ export default class App extends Component {
         <Header />
         <Router onChange={this.handleRoute}>
           <Portfolio path="/" />
+          <Writings path="/writings" />
         </Router>
       </div>
     );
