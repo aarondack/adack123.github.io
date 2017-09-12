@@ -8,6 +8,7 @@ import Writings from '../routes/writings';
 import Greek from './posts/greek';
 import ReduxSaga from './posts/redux-saga';
 import Davinci from './posts/davinci';
+import About from './about';
 
 export default class App extends Component {
   /** Gets fired when the route changes.
@@ -28,6 +29,7 @@ export default class App extends Component {
           <Greek path="/writings/greek" />
           <ReduxSaga path="/writings/redux-asynchronicity" />
           <Davinci path="/writings/the-lost-leonardo" />
+          <About path="/about" />
         </Router>
       </div>
     );

@@ -40,7 +40,7 @@ class Blog extends Component {
             description={['History', 'Mystery', 'Art']}
           />
         </Link>
-        <Link href="https://baylor-ir.tdl.org/baylor-ir/bitstream/handle/2104/8942/aaron_Dack.pdf?sequence=4">
+        <a href="https://baylor-ir.tdl.org/baylor-ir/bitstream/handle/2104/8942/aaron_Dack.pdf?sequence=4">
           <Card
             img={algae}
             title={
@@ -48,7 +48,7 @@ class Blog extends Component {
             }
             description={['Wetland Ecology', 'Honors Thesis']}
           />
-        </Link>
+        </a>
       </BlogContainer>
     );
   }
