@@ -1,3 +1,4 @@
+import { h, Component } from 'preact';
 import styled, { keyframes } from 'styled-components';
 import { Desktop, Tablet, Mobile } from '../responsive';
 import Box from '../box';
@@ -73,48 +74,86 @@ const MobileSection = styled.section`
   flex-direction: column;
 `;
 
-const Grid = () => (
-  <GridContainer>
-    <Desktop>
-      <GridSection>
-        {imageSources.map((value, key) => (
-          <Box
-            img={value}
-            mobile={false}
-            color={imageOverlayColors[key]}
-            name={imageText[key]}
-            description={imageDescriptions[key]}
-          />
-        ))}
-      </GridSection>
-    </Desktop>
-    <Tablet>
-      <GridSection>
-        {imageSources.map((value, key) => (
-          <Box
-            img={value}
-            mobile
-            color={imageOverlayColors[key]}
-            name={imageText[key]}
-            description={imageDescriptions[key]}
-          />
-        ))}
-      </GridSection>
-    </Tablet>
-    <Mobile>
-      <MobileSection>
-        {imageSources.map((value, key) => (
-          <Box
-            img={value}
-            mobile
-            color={imageOverlayColors[key]}
-            name={imageText[key]}
-            description={imageDescriptions[key]}
-          />
-        ))}
-      </MobileSection>
-    </Mobile>
-  </GridContainer>
-);
+export default class Grid extends Component {
+  state = {
+    loading: true,
+    images: [],
+  };
 
-export default Grid;
+  imageLoadingChanged = () => {
+    this.setState({
+      ...this.state,
+      images: [...this.state.images, true],
+    });
+
+    this.state.images.length === 6
+      ? this.setState({
+        ...this.state,
+        loading: false,
+      })
+      : null;
+    return false;
+  };
+
+  renderGrid() {
+    <GridContainer>
+      <Desktop>
+        <GridSection>
+          {imageSources.map((value, key) => (
+            <Box
+              img={value}
+              imageLoading={this.imageLoadingChanged}
+              mobile={false}
+              color={imageOverlayColors[key]}
+              name={imageText[key]}
+              description={imageDescriptions[key]}
+            />
+          ))}
+        </GridSection>
+      </Desktop>
+      <Tablet>
+        <GridSection>
+          {imageSources.map((value, key) => (
+            <Box
+              img={value}
+              imageLoading={this.imageLoadingChanged}
+              mobile
+              color={imageOverlayColors[key]}
+              name={imageText[key]}
+              description={imageDescriptions[key]}
+            />
+          ))}
+        </GridSection>
+      </Tablet>
+      <Mobile>
+        <MobileSection>
+          {imageSources.map((value, key) => (
+            <Box
+              img={value}
+              imageLoading={this.imageLoadingChanged}
+              mobile
+              color={imageOverlayColors[key]}
+              name={imageText[key]}
+              description={imageDescriptions[key]}
+            />
+          ))}
+        </MobileSection>
+      </Mobile>
+    </GridContainer>
+  }
+
+  render() {
+    const { loading, images } = this.state;
+    return (
+      <div>
+       {
+        loading ?
+        <div>
+          <span>{ console.log('hello') }</span>
+        </div>
+        :
+        this.renderGrid()
+      }
+    );
+  }
+}

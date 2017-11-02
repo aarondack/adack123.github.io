@@ -73,9 +73,9 @@ const BoxOverlayParagraph = styled.p`
   text-align: center;
 `;
 
-const Box = ({ img, route, color, mobile, name, description }) => (
+const Box = ({ img, imageLoading, route, color, mobile, name, description }) => (
   <BoxWrapping mobile={mobile}>
-    <PortfolioImage src={img} />
+    <PortfolioImage src={img} onLoad={imageLoading} onError={imageLoading} />
     <BoxOverlay>
       <BoxOverlayContainer color={color} />
       <BoxOverlayInside>
