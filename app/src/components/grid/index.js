@@ -95,65 +95,68 @@ export default class Grid extends Component {
     return false;
   };
 
-  renderGrid() {
-    <GridContainer>
-      <Desktop>
-        <GridSection>
-          {imageSources.map((value, key) => (
-            <Box
-              img={value}
-              imageLoading={this.imageLoadingChanged}
-              mobile={false}
-              color={imageOverlayColors[key]}
-              name={imageText[key]}
-              description={imageDescriptions[key]}
-            />
-          ))}
-        </GridSection>
-      </Desktop>
-      <Tablet>
-        <GridSection>
-          {imageSources.map((value, key) => (
-            <Box
-              img={value}
-              imageLoading={this.imageLoadingChanged}
-              mobile
-              color={imageOverlayColors[key]}
-              name={imageText[key]}
-              description={imageDescriptions[key]}
-            />
-          ))}
-        </GridSection>
-      </Tablet>
-      <Mobile>
-        <MobileSection>
-          {imageSources.map((value, key) => (
-            <Box
-              img={value}
-              imageLoading={this.imageLoadingChanged}
-              mobile
-              color={imageOverlayColors[key]}
-              name={imageText[key]}
-              description={imageDescriptions[key]}
-            />
-          ))}
-        </MobileSection>
-      </Mobile>
-    </GridContainer>
+  renderSpinner() {
+    const { loading, images } = this.state;
+    if (!loading) {
+      return null;
+    } else {
+      return (
+        <Overlay>
+          <ScaleLoader size="50px" margin="0 auto"/>
+        </Overlay>
+      )
+    }
   }
 
   render() {
-    const { loading, images } = this.state;
     return (
       <div>
-       {
-        loading ?
-        <div>
-          <span>{ console.log('hello') }</span>
-        </div>
-        :
-        this.renderGrid()
-      }
+        { this.renderSpinner() }
+        <GridContainer>
+          <Desktop>
+            <GridSection>
+              {imageSources.map((value, key) => (
+                <Box
+                  img={value}
+                  imageLoading={this.imageLoadingChanged}
+                  mobile={false}
+                  color={imageOverlayColors[key]}
+                  name={imageText[key]}
+                  description={imageDescriptions[key]}
+                />
+              ))}
+            </GridSection>
+          </Desktop>
+          <Tablet>
+            <GridSection>
+              {imageSources.map((value, key) => (
+                <Box
+                  img={value}
+                  imageLoading={this.imageLoadingChanged}
+                  mobile
+                  color={imageOverlayColors[key]}
+                  name={imageText[key]}
+                  description={imageDescriptions[key]}
+                />
+              ))}
+            </GridSection>
+          </Tablet>
+          <Mobile>
+            <MobileSection>
+              {imageSources.map((value, key) => (
+                <Box
+                  img={value}
+                  imageLoading={this.imageLoadingChanged}
+                  mobile
+                  color={imageOverlayColors[key]}
+                  name={imageText[key]}
+                  description={imageDescriptions[key]}
+                />
+              ))}
+            </MobileSection>
+          </Mobile>
+        </GridContainer>
+    </div>
     );
   }
 }
