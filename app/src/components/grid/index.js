@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import styled, { keyframes } from 'styled-components';
 import { Desktop, Tablet, Mobile } from '../responsive';
+import ScaleLoader from 'halogen/ScaleLoader';
 import Box from '../box';
 
 import patchboxImage from '../../assets/images/patchbox-items.jpg';
@@ -9,6 +10,7 @@ import nuventsImage from '../../assets/images/NuventsCover.jpg';
 import switchelImage from '../../assets/images/switchel.jpg';
 import amovioImage from '../../assets/images/amovio.jpg';
 import solarPanel from '../../assets/images/solar.jpg';
+
 
 const imageSources = [
   patchboxImage,
@@ -73,6 +75,18 @@ const MobileSection = styled.section`
   display: flex;
   flex-direction: column;
 `;
+
+const Overlay = styled.div`
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+`
 
 export default class Grid extends Component {
   state = {

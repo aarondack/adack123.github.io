@@ -19,9 +19,6 @@ export default class Header extends Component {
   renderNav = () => (
     <nav className="nav-effect">
       <Link activeClassName={style.active} href="/">
-        Portfolio
-      </Link>
-      <Link activeClassName={style.active} href="/writings">
         Writings
       </Link>
       <Link activeClassName={style.active} href="/about">

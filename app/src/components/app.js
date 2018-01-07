@@ -24,8 +24,7 @@ export default class App extends Component {
       <div id="app">
         <Header />
         <Router onChange={this.handleRoute}>
-          <Portfolio path="/" />
-          <Writings path="/writings" />
+          <Writings path="/" />
           <Greek path="/writings/greek" />
           <ReduxSaga path="/writings/redux-asynchronicity" />
           <Davinci path="/writings/the-lost-leonardo" />
